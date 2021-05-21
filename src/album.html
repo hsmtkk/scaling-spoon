@@ -1,0 +1,1694 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <script>
+dataLayer = [{
+    "userStatus" : "User",
+    "loginSellerId" : "1021",
+    "face" : {
+        "using" : "true",
+        "type" : "on"
+    },
+    "ABtest" : {
+        "user_type" : "even"
+    }
+}];
+</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5RFQCCL');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-f0800346c0914528590",applicationID:"1383528521"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <title>
+                        写真一覧 | えんフォト
+            </title>
+    <link rel="index" href="https://en-photo.net/" />
+    <meta name="description" content="初めての方・保護者の方は合言葉を入力してご利用登録【ご登録無料】をしてください。えんフォトは、保育園や幼稚園の先生やカメラマンが撮影した写真をPC・スマホから閲覧・購入できるインターネット写真販売システムです。まずは無料登録から！">
+    <meta name="keywords" content="えんフォト ログイン">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="rBzvxc0yGfvx9kpeLwIBQiP6NnWiUOjo2uExmKTH">
+    <link rel="shortcut icon" href="/img/favicon.ico" >
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="えんフォト" />
+    <meta name="application-name" content="えんフォト">
+<meta name="msapplication-TileColor" content="#ffffff">
+
+    <meta name="msapplication-config" content="https://en-photo.net/browserconfig.xml">
+    <meta name="msapplication-square70x70logo" content="/img/windows-tile/win_tile_70x70.png">
+    <meta name="msapplication-square150x150logo" content="/img/windows-tile/win_tile_150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/img/windows-tile/win_tile_310x150.png">
+    <meta name="msapplication-square310x310logo" content="/img/windows-tile/win_tile_310x310.png">
+
+    
+            <link rel="stylesheet" href="/assets/css/user.css?1621377652">
+
+    <link rel="stylesheet" type="text/css" href="/vendor/photoswipe/photoswipe.css?rXrQZ6Bhyo"/>
+    <link rel="stylesheet" type="text/css" href="/vendor/photoswipe/photoswipe-default-skin/default-skin.css?rXrQZ6Bhyo"/>
+</head>
+<body class="" id="">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RFQCCL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+            <!--[if lt IE 9]>
+        <p class="browserupgrade">古いバージョンのブラウザをお使いのため正しく表示できません。<a href="http://browsehappy.com/?locale=ja">ブラウザをアップグレード</a></p>
+        <![endif]-->
+                <div id="wrapper">
+            <div id="contents">
+                                    <header id="header">
+            <div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+     
+                <div id="nav-user-small" class="mt-1 visible-xs clearfix">
+                            <a href="/login">
+                    <img id="enphoto-logo" src="/img/logo/en-photo/logo_white.png" alt='えんフォト'/>
+                </a>
+                <div class="pull-right">
+                    <a href="/informations"><i class="fa fa-info-circle"></i><span class="small">お知らせ</span>
+                                                    <div class="info-count">31</div>
+                                            </a>
+                    <a href="/logout"><i class="fa fa-sign-out"></i><span class="small">ログアウト</span></a>
+                </div>
+                <p>
+                    プチ・ナーサリー西大島
+                                                                        (
+                                                            0_ひよこ組:2018
+                                                            きりんぐみ(3歳児):2021
+                                                            ぱんだぐみ(2歳児):2020
+                                                            りすぐみ(1歳児):2019
+                                                        )
+                                                                <br>
+                    橋本紘希 様
+                </p>
+                    </div>
+    </div>
+        <div class="collapse navbar-collapse">
+    <div class="nav-logo">
+                    <a href="/albums" class="hidden-xs">
+                <img id="enphoto-logo" src="/img/logo/en-photo/logo_white.png" alt='えんフォト'/>
+            </a>
+            <ul class="user-class">
+                <li>
+                    <p>
+                                                    プチ・ナーサリー西大島
+                                                                                                            （
+                                                                    0_ひよこ組:2018
+                                                                    きりんぐみ(3歳児):2021
+                                                                    ぱんだぐみ(2歳児):2020
+                                                                    りすぐみ(1歳児):2019
+                                                                ）
+                                                                        </p>
+                    <p>橋本紘希様</p>
+                </li>
+            </ul>
+            </div>
+            <ul class="nav navbar-nav">
+                            <li>
+    <a href="/informations">
+        <div class="info">
+            <i class="fa fa-info-circle" aria-hidden="true"></i><span>お知らせ</span>
+                                        <div class="info-count">31</div>
+                    </div>
+    </a>
+</li>
+<li>
+    <a href="/dashboard">
+        <i class="fa fa-user" aria-hidden="true"></i><span>マイページ</span>
+    </a>
+</li>
+<li>
+    <a href="/albums">
+        <i class="fa fa-book" aria-hidden="true"></i><span>アルバム</span>
+    </a>
+</li>
+<li>
+    <a href="/carts?rXrQZ6Bhyo">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i><span>カート</span>
+    </a>
+</li>
+<li>
+    <a href="/downloads?rXrQZ6Bhyo">
+        <i class="fa fa-download" aria-hidden="true"></i><span>ダウンロード</span>
+    </a>
+</li>
+            
+            <li class="header-contact">
+                <div class="contact-wrap">
+                    <div class="contact-title mb-2">contact</div>
+                    <div class="contact-body">
+                        <p class="btn_form"><a href="/contact" id="menu-help"></a></p>
+                        <div class="contact-txt">
+                            <p class="tel js-tell tel-jp">
+                                <i class="fa fa-phone"></i>03-6221-3068
+                            </p>
+                            <p class="reception">受付時間　平日10:00〜19:00</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</div>
+        <div class="header-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="icon-title">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+                        </span>
+                        写真一覧                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                                    <div class="header-free_sales" id="js-available_coupon_count" data-available_coupon_count="0">
+                            </div>
+            
+                        </header>
+                
+                        <div class="container p-album">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/albums"><i class="fa fa-chevron-circle-left"></i> アルバム一覧に戻る</a>
+                <div class="main-box p-album-info mb-3">
+                    <div class="p-album-title clearfix">
+                        <div class="p-album-name">2021年 3月 誕生日会 </div>
+                        <div class="p-album-attr">
+                            <div class="mr-4">
+                                <span class="p-album-label">掲載枚数</span>29枚
+                            </div>
+                            <div>
+                                <span class="p-album-label">購入期限</span>
+                                <span class="text-danger">2021/07/07</span>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="p-album-size">
+                                                                                                            <div class="clearfix mb-3">
+                                    <div class="pull-left p-album-size-label">
+                                        <span class="size  font-weight-bold">L版</span>
+                                        <span class="font-weight-bold">55円</span>
+                                    </div>
+                                    <div class="pull-left">標準的な写真プリントサイズ。<br>（89×127mm）</div>
+                                </div>
+                                                                                                                <div class="clearfix mb-3">
+                                    <div class="pull-left p-album-size-label">
+                                        <span class="size  font-weight-bold">2L版</span>
+                                        <span class="font-weight-bold">110円</span>
+                                    </div>
+                                    <div class="pull-left">集合写真等に最適な大きいサイズ。<br>（127×178mm）</div>
+                                </div>
+                                                                                                                <div class="clearfix mb-3">
+                                    <div class="pull-left p-album-size-label">
+                                        <span class="size download font-weight-bold">DL</span>
+                                        <span class="font-weight-bold">88円</span>
+                                    </div>
+                                    <div class="pull-left">JPGデータをダウンロードできます。<br>購入後マイページより写真データをダウンロードしてください。</div>
+                                </div>
+                                                                                                                                                                                                                                                                                                            <div class="size-information">
+                            <p>価格はすべて税込になります。</p>
+                            <p class="dl-information">
+                                                                                                                                </p>
+                        </div>
+                                                <p class="text-danger">※表示されている価格は、お写真1枚あたりの価格(税込)になります。</p>
+                        <p class="text-danger">※送料は別途、1封筒毎に税込165円かかります。(封筒はL版であれば150枚、2Lであれば75枚まで入ります)</p>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#sample">＞送料の詳細はこちら</a>
+                        <div id="sample" class="pl-3 collapse">
+                            えんフォトで使用している封筒(1通あたり税込165円)は、【L版であれば150枚、2Lであれば75枚】まで入る大きさの封筒を採用しております。<br>
+                            ※L版で150枚の写真が封筒に入る事が、基準です。また2L版は、L版2枚分の大きさで計算します。<br>
+                            1封筒あたりの枚数が超える数でご注文頂いた際には、別封筒(税込165円)での発送となります。<br>
+                            またご自宅とご実家など、複数の送付先に送る場合は、送り先分の送料がかかります。（送付先の追加は3か所まで可能）<br><br>
+                            【送料例】<br>
+                            例1：L版140枚・2L版5枚購入の場合、1通の封筒での発送となるため、送料165円となります。<br><br>
+                            例2：L版140枚・2L版25枚購入の場合、2通の封筒での発送となるため、送料330円となります。<br><br>
+                            例3：L版100枚・2L版5枚を自宅と実家の2か所に送付する場合は、2か所の送付先へ1通ずつの封筒を発送するため、送料330円となります。<br><br>
+                            例4：L版140枚・2L版10枚を自宅と実家の2か所に送付する場合は、2か所の送付先へ2通ずつの封筒を発送するため、送料660円となります。
+                        </div>
+                        <p class="text-danger">※ご利用の環境によっては画像が表示できない場合がございます。</p><a href="/require_env" target="_blank">＞推奨環境についてはこちら</a>
+                        <p class="text-danger">※ ご購入いただいた写真には<i class="fa fa-check-circle text-primary" aria-hidden="true"></i>マークがつきます</p>
+                    </div>
+                </div>
+                                    
+                                        <form method="get" action="/albums/298447">
+            
+                        <div class="main-box p-rekognition" id="face-switch-box">
+                
+                <div class="p-rekognition-selected-conditions">
+                    
+                    <div class="p-rekognition-selected-conditions-registered">
+                        <div class="c-rekognition-selected-conditions-title">
+                            <b>お子様の写真を登録すると</b>写真の検索ができます
+                        </div>
+                        <div class="p-rekognition-selected-conditions-registered-list">
+                            <span class="no-data-message hidden">
+                                未登録のためご利用できません。
+                            </span>
+                            <div class="item js-template">
+                                <label class="c-rekognition-label">
+                                    <div class="c-rekognition-registered-icon">
+                                        <img class="image">
+                                    </div>
+                                    <a class="js-confirm-badge" href="/account/child/{id}/photos">
+                                        <img
+                                            src="/img/face/confirm-badge.png"
+                                            class="c-rekognition-child-face-confirm-badge animation"
+                                        >
+                                    </a>
+                                    <div class="c-rekognition-registered-icon-checkbox">
+                                        <input type="checkbox" name="child_ids[]" class="js-checkbox-child_ids">
+                                        <b class="name"></b> さん
+                                    </div>
+                                </label>
+                                <a class="link" href="/account/child/{id}/photos">
+                                    <div class="c-rekognition-unregistered-icon">
+                                        <div class="icon">
+                                            <i class="simple-line-icons-user"></i>
+                                            <i class="simple-line-icons-user-female"></i>
+                                        </div>
+                                        <span class="label">
+                                            登録
+                                        </span>
+                                    </div>
+                                    <div class="c-rekognition-registered-icon-checkbox">
+                                        <b class="name"></b> さん
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="p-rekognition-selected-conditions-purchased">
+                        <div class="c-rekognition-selected-conditions-title">
+                            <span class="c-rekognition-selected-conditions-title">
+                                <b>購入写真に写っている人物</b>から写真の検索ができます
+                            </span>
+                        </div>
+                        <div class="p-rekognition-selected-conditions-purchased-list">
+                            <div class="no-data-message hidden">
+                                <div class="message">
+                                    写真を取得できませんでした
+                                </div>
+                                <div class="remarks">
+                                    ※購入いただいた写真に数名写っている場合、<br/>顔が認知されない場合がございます。
+                                </div>
+                            </div>
+                            <div class="item js-template">
+                                <label class="c-rekognition-label">
+                                    <div class="c-rekognition-registered-icon">
+                                        <img class="image"/>
+                                    </div>
+                                    <div class="c-rekognition-registered-icon-checkbox">
+                                        <input type="hidden" name="show_face_ids[]" class="js-hidden-show_face_ids">
+                                        <input
+                                            type="checkbox"
+                                            name="selected_face_ids[]"
+                                            class="js-checkbox-selected_face_ids"
+                                        >
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="c-rekognition-search-button">
+                    <button
+                        type="submit"
+                        class="btn btn-success button js-button-search"
+                        disabled
+                    >
+                        探す
+                    </button>
+                </div>
+            </div>
+                    </form>
+                <div class="c-rekognition-child-face-confirm" style="margin-top: -12px; display: none;">
+            <img src="/img/face/confirm-badge.png" class="c-rekognition-child-face-confirm-badge"
+            >：登録しているお子様の写真上で複数の顔が検出されました。タップして確認をお願いいたします。
+        </div>
+                        
+            <div id="search-notification">
+                <div class="white-alert clearfix failed" style="display:none;">
+                    <div class="icon-box">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    </div>
+                    <div class="text-box">ページ読み込み中に何らかのエラーが発生しました。しばらく時間を置いて、再度アルバムにアクセスしてください。<br>※写真の購入は可能です。ご利用ください。</div>
+                    <div class="close-box">
+                        <button type="button" name="button">
+                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    
+
+
+
+
+                                <div class="row mb-3 p-album-photo" id="js-gallery">
+                    <div class="change-column visible-xs">
+                        <a id="change-column-button" href="javascript:void(0)" data-column="1">
+                            <i class="fa fa-th-large"></i>
+                            <span>1列表示へ切替</span>
+                        </a>
+                    </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188232">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188232</div>
+                            <a href="/photos/1021/298447/9363b3a8-0bba-4162-9477-97d973be46c1" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/9363b3a8-0bba-4162-9477-97d973be46c1" class="img-responsive img-thumbnail lazy w-100"data-id="33188232"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188232_1" photo_id="33188232" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188232_2" photo_id="33188232" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188232_3" photo_id="33188232" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188234">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188234</div>
+                            <a href="/photos/1021/298447/b1065a94-bb3b-49c2-a2c1-be8e24b8cf1f" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/b1065a94-bb3b-49c2-a2c1-be8e24b8cf1f" class="img-responsive img-thumbnail lazy w-100"data-id="33188234"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188234_1" photo_id="33188234" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188234_2" photo_id="33188234" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188234_3" photo_id="33188234" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188233">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188233</div>
+                            <a href="/photos/1021/298447/3f6340e6-ada7-455a-9704-4d17c97d76d9" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/3f6340e6-ada7-455a-9704-4d17c97d76d9" class="img-responsive img-thumbnail lazy w-100"data-id="33188233"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188233_1" photo_id="33188233" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188233_2" photo_id="33188233" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188233_3" photo_id="33188233" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188235">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188235</div>
+                            <a href="/photos/1021/298447/04ca8e19-e942-4275-9d30-aa88c7c8e07f" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/04ca8e19-e942-4275-9d30-aa88c7c8e07f" class="img-responsive img-thumbnail lazy w-100"data-id="33188235"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188235_1" photo_id="33188235" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188235_2" photo_id="33188235" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188235_3" photo_id="33188235" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188236">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188236</div>
+                            <a href="/photos/1021/298447/680add04-df4a-46c7-8dae-a8627dafe69b" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/680add04-df4a-46c7-8dae-a8627dafe69b" class="img-responsive img-thumbnail lazy w-100"data-id="33188236"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188236_1" photo_id="33188236" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188236_2" photo_id="33188236" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188236_3" photo_id="33188236" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188237">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188237</div>
+                            <a href="/photos/1021/298447/cdb34636-59e1-4698-bf2e-5cce91e5f887" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/cdb34636-59e1-4698-bf2e-5cce91e5f887" class="img-responsive img-thumbnail lazy w-100"data-id="33188237"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188237_1" photo_id="33188237" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188237_2" photo_id="33188237" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188237_3" photo_id="33188237" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188241">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188241</div>
+                            <a href="/photos/1021/298447/7e19b24b-e162-46ce-b630-9a1f20ca9d51" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/7e19b24b-e162-46ce-b630-9a1f20ca9d51" class="img-responsive img-thumbnail lazy w-100"data-id="33188241"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188241_1" photo_id="33188241" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188241_2" photo_id="33188241" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188241_3" photo_id="33188241" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188243">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188243</div>
+                            <a href="/photos/1021/298447/85540b2d-8c30-44d2-8ca8-38eec68c9847" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/85540b2d-8c30-44d2-8ca8-38eec68c9847" class="img-responsive img-thumbnail lazy w-100"data-id="33188243"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188243_1" photo_id="33188243" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188243_2" photo_id="33188243" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188243_3" photo_id="33188243" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188242">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188242</div>
+                            <a href="/photos/1021/298447/73756f10-a8cd-49d9-983d-6b3c45d7e149" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/73756f10-a8cd-49d9-983d-6b3c45d7e149" class="img-responsive img-thumbnail lazy w-100"data-id="33188242"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188242_1" photo_id="33188242" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188242_2" photo_id="33188242" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188242_3" photo_id="33188242" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188245">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188245</div>
+                            <a href="/photos/1021/298447/59e3ae37-a5a0-41af-a8ff-d18eb929be92" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/59e3ae37-a5a0-41af-a8ff-d18eb929be92" class="img-responsive img-thumbnail lazy w-100"data-id="33188245"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188245_1" photo_id="33188245" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188245_2" photo_id="33188245" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188245_3" photo_id="33188245" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188247">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188247</div>
+                            <a href="/photos/1021/298447/4d0b5aac-20eb-472f-ac2c-a5049a73ed13" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/4d0b5aac-20eb-472f-ac2c-a5049a73ed13" class="img-responsive img-thumbnail lazy w-100"data-id="33188247"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188247_1" photo_id="33188247" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188247_2" photo_id="33188247" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188247_3" photo_id="33188247" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188244">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188244</div>
+                            <a href="/photos/1021/298447/b0e02ec3-0a37-44d6-bb1d-0a70f97c99b6" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/b0e02ec3-0a37-44d6-bb1d-0a70f97c99b6" class="img-responsive img-thumbnail lazy w-100"data-id="33188244"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188244_1" photo_id="33188244" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188244_2" photo_id="33188244" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188244_3" photo_id="33188244" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188250">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188250</div>
+                            <a href="/photos/1021/298447/7db56c65-4c50-415a-8d05-58577f753dd6" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/7db56c65-4c50-415a-8d05-58577f753dd6" class="img-responsive img-thumbnail lazy w-100"data-id="33188250"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188250_1" photo_id="33188250" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188250_2" photo_id="33188250" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188250_3" photo_id="33188250" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188239">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188239</div>
+                            <a href="/photos/1021/298447/4ef37ede-5334-404e-bf01-f23a2447d1fa" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/4ef37ede-5334-404e-bf01-f23a2447d1fa" class="img-responsive img-thumbnail lazy w-100"data-id="33188239"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188239_1" photo_id="33188239" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188239_2" photo_id="33188239" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188239_3" photo_id="33188239" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188238">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188238</div>
+                            <a href="/photos/1021/298447/6c5dc5cc-ccf5-4588-8eec-33c345976137" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/6c5dc5cc-ccf5-4588-8eec-33c345976137" class="img-responsive img-thumbnail lazy w-100"data-id="33188238"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188238_1" photo_id="33188238" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188238_2" photo_id="33188238" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188238_3" photo_id="33188238" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188220">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188220</div>
+                            <a href="/photos/1021/298447/76fb1227-6e2e-41c3-8c2d-d35d26af4058" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/76fb1227-6e2e-41c3-8c2d-d35d26af4058" class="img-responsive img-thumbnail lazy w-100"data-id="33188220"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188220_1" photo_id="33188220" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188220_2" photo_id="33188220" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188220_3" photo_id="33188220" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188222">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188222</div>
+                            <a href="/photos/1021/298447/31cf3377-b0a4-49f1-a011-32f46ec79f87" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/31cf3377-b0a4-49f1-a011-32f46ec79f87" class="img-responsive img-thumbnail lazy w-100"data-id="33188222"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188222_1" photo_id="33188222" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188222_2" photo_id="33188222" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188222_3" photo_id="33188222" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188223">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188223</div>
+                            <a href="/photos/1021/298447/e1e92664-bd51-49a0-bd84-d41cf6374fec" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/e1e92664-bd51-49a0-bd84-d41cf6374fec" class="img-responsive img-thumbnail lazy w-100"data-id="33188223"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188223_1" photo_id="33188223" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188223_2" photo_id="33188223" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188223_3" photo_id="33188223" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188221">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188221</div>
+                            <a href="/photos/1021/298447/3a21b23d-962e-4b6e-b8c9-272da3d640c9" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/3a21b23d-962e-4b6e-b8c9-272da3d640c9" class="img-responsive img-thumbnail lazy w-100"data-id="33188221"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188221_1" photo_id="33188221" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188221_2" photo_id="33188221" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188221_3" photo_id="33188221" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188225">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188225</div>
+                            <a href="/photos/1021/298447/db26a891-83bb-4920-881d-27597e94eb65" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/db26a891-83bb-4920-881d-27597e94eb65" class="img-responsive img-thumbnail lazy w-100"data-id="33188225"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188225_1" photo_id="33188225" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188225_2" photo_id="33188225" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188225_3" photo_id="33188225" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188227">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188227</div>
+                            <a href="/photos/1021/298447/1052fd5a-5cf7-429b-a0fb-d5e20fc0f8b1" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/1052fd5a-5cf7-429b-a0fb-d5e20fc0f8b1" class="img-responsive img-thumbnail lazy w-100"data-id="33188227"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188227_1" photo_id="33188227" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188227_2" photo_id="33188227" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188227_3" photo_id="33188227" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188226">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188226</div>
+                            <a href="/photos/1021/298447/c528400a-4ac0-4bf9-8fbf-77f0da8a34fa" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/c528400a-4ac0-4bf9-8fbf-77f0da8a34fa" class="img-responsive img-thumbnail lazy w-100"data-id="33188226"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188226_1" photo_id="33188226" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188226_2" photo_id="33188226" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188226_3" photo_id="33188226" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188224">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188224</div>
+                            <a href="/photos/1021/298447/91516a6f-324b-4d09-bb57-3444c8b1407c" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/91516a6f-324b-4d09-bb57-3444c8b1407c" class="img-responsive img-thumbnail lazy w-100"data-id="33188224"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188224_1" photo_id="33188224" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188224_2" photo_id="33188224" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188224_3" photo_id="33188224" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188229">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188229</div>
+                            <a href="/photos/1021/298447/48262d63-7882-4857-b252-9ff6affb66da" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/48262d63-7882-4857-b252-9ff6affb66da" class="img-responsive img-thumbnail lazy w-100"data-id="33188229"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188229_1" photo_id="33188229" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188229_2" photo_id="33188229" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188229_3" photo_id="33188229" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188228">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188228</div>
+                            <a href="/photos/1021/298447/fc2988f7-63df-46cd-9c3e-5f87af06d96c" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/fc2988f7-63df-46cd-9c3e-5f87af06d96c" class="img-responsive img-thumbnail lazy w-100"data-id="33188228"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188228_1" photo_id="33188228" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188228_2" photo_id="33188228" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188228_3" photo_id="33188228" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188230">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188230</div>
+                            <a href="/photos/1021/298447/7a34bb8e-04c0-412d-8c97-ff217367aa3f" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/7a34bb8e-04c0-412d-8c97-ff217367aa3f" class="img-responsive img-thumbnail lazy w-100"data-id="33188230"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188230_1" photo_id="33188230" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188230_2" photo_id="33188230" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188230_3" photo_id="33188230" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188231">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188231</div>
+                            <a href="/photos/1021/298447/ad56b2fc-8d59-4a20-8b98-f1745d67a405" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/ad56b2fc-8d59-4a20-8b98-f1745d67a405" class="img-responsive img-thumbnail lazy w-100"data-id="33188231"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188231_1" photo_id="33188231" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188231_2" photo_id="33188231" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188231_3" photo_id="33188231" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188248">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188248</div>
+                            <a href="/photos/1021/298447/d1b70272-ddbd-4bc2-9373-bff7877e4609" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/d1b70272-ddbd-4bc2-9373-bff7877e4609" class="img-responsive img-thumbnail lazy w-100"data-id="33188248"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188248_1" photo_id="33188248" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188248_2" photo_id="33188248" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188248_3" photo_id="33188248" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                            <div class="col-xs-6 col-sm-4 col-md-3 photo" id="js-photo_33188240">
+                            <div class="icon-box">
+                                                                                            </div>
+                            <div class="label label-photo-id">33188240</div>
+                            <a href="/photos/1021/298447/9d721e7e-a2ca-467a-b2ff-c4261b89ee36" data-gallery="" class="js-thumb-link" data-width="420" data-height="420" data-matched="">
+                                <img data-src="/photos/1021/298447/9d721e7e-a2ca-467a-b2ff-c4261b89ee36" class="img-responsive img-thumbnail lazy w-100"data-id="33188240"/>
+                            </a>
+                                                        <div class="photo-price-checkbox price-label-count-3">
+                                                                                                        <label class="size-baloon" title="L版">
+                                        <input id="js_33188240_1" photo_id="33188240" size_id="1" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="2L版">
+                                        <input id="js_33188240_2" photo_id="33188240" size_id="2" quantity="1" name="cart_in" type="checkbox" value="1">
+                                        <span>2L版 <i class="fa fa-square"></i></span>
+                                    </label>
+                                                                                                                                        <label class="size-baloon" title="DL">
+                                                                                    <input id="js_33188240_3" photo_id="33188240" size_id="3" quantity="1" name="cart_in" type="checkbox" value="1">
+                                            <span><i class="fa fa-download"></i> <i class="fa fa-square"></i></span>
+                                                                            </label>
+                                                            </div>
+                        </div>
+                                    </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <a href="/carts?type=photo&rXrQZ6Bhyo" class="btn btn-primary btn-block">カート画面へ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="float-btn-box">
+            <div class="container">
+                <a href="/albums" class="btn btn-success btn-block">他のアルバムを見る</a>
+                <a href="/carts?type=photo&rXrQZ6Bhyo" class="btn btn-primary btn-block to-cart-btn">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    カート画面へ
+                    <span class="cart-count">0</span>
+                </a>
+                <p>（選んだ写真はカートに残ります）</p>
+            </div>
+        </div>
+        <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="errorModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" id="errorModalClose">&times</button>
+                        <h3 class="modal-title font-weight-bold">お知らせ</h3>
+                    </div>
+                    <div class="modal-body">
+                       ご迷惑をおかけして申し訳ありません。<br>
+このアルバムは削除されたか、現在利用できない可能性があります。<br>
+恐れ入りますが、えんフォトホームページのトップまたは下記のリンクよりお探しください。<br>
+<a href="/albums">アルバム一覧</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="閉じる"></button>
+                <button class="pswp__button pswp__button--share" title="シェア"></button>
+                <button class="pswp__button pswp__button--fs" title="フルスクリーン"></button>
+                <button class="pswp__button pswp__button--zoom" title="拡大/縮小"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="前の写真へ">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="次の写真へ">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center">
+                </div>
+            </div>
+        </div>
+    </div>
+            <div class="footer">
+            <div class="row">
+                <div class="btn_wrap p-album" style="width: 990px;">
+                    <div class="p-album-photo">
+                        <div class="photo-price-checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<style>
+    .pswp > .footer {
+        position: absolute;
+        bottom: 50px;
+        display: block;
+        width: 100%;
+    }
+
+    .pswp .footer .btn_wrap {
+        margin: 0 auto;
+        float: none;
+    }
+
+    .pswp .footer .photo-price-checkbox {
+        margin: 0;
+    }
+
+    .pswp .icon-box {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        font-size: 25px;
+        color: #58bdf0;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 5px;
+        padding: 0 5px;
+        z-index: 99;
+    }
+</style>
+    <div id="context-menu" class="alert alert-warning" style="display:none;z-index:3000">
+    <p>サムネイルのダウンロードは出来ません</p>
+</div>
+
+                                    <div class="container mt-3">
+    <div class="row page-up text-center">
+        <div class="col-md-1 col-md-offset-11 col-xs-offset-0">
+            <a href="#pageTop" class="smooth-scroll">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-angle-up fa-stack-1x fa-inverse"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>                            </div>
+            <footer class="small">
+    <div class="container">
+        <ul class="list-inline text-center">
+            <li><a class="text-gray-dark" href="/albums">ホーム</a></li>
+            <li><a class="text-gray-dark" href="https://www.uluru.biz/company/company_about">運営・販売会社</a></li>
+            <li><a class="text-gray-dark" href="/term">利用規約</a></li>
+            <li><a class="text-gray-dark" href="/contact">お問い合わせ</a></li>
+                            <li><a class="text-gray-dark" href="/help">ヘルプ</a></li>
+                        <li><a class="text-gray-dark" href="https://www.uluru.biz/policy">プライバシーポリシー</a>
+            </li>
+            <li><a class="text-gray-dark" href="/law">特定商取引法に基づく表記</a></li>
+            <li><a class="text-gray-dark" href="/require_env">推奨環境</a></li>
+        </ul>
+    </div>
+    <div class="copyright text-center pt-1">Copyright © ULURU.CO.,LTD. All Rights Reserved.</div>
+</footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/vendor/jquery-smooth-scroll.js?rXrQZ6Bhyo"></script>
+        <!-- Laravel Javascript Validation -->
+        <script type="text/javascript" src="https://en-photo.net/vendor/jsvalidation/js/jsvalidation.js"></script>
+        <script src="/js/common/common.js?rXrQZ6Bhyo"></script>
+        <script src="//d2wy8f7a9ursnm.cloudfront.net/v4/bugsnag.min.js"></script>
+        <script>
+            bugsnagKey = "e8ee248f2fd7a83d76deddd7eedaeef1";
+            var bugsnagClient = bugsnag({
+                apiKey: bugsnagKey,
+                releaseStage: 'production'
+            });
+            bugsnagClient.user = {
+                user_id: '61734',
+                seller_user_id: '',
+                type: 'User',
+            };
+        </script>
+                
+    
+            <script type="text/javascript" src="/vendor/jquery.lazyload.min.js?rXrQZ6Bhyo"></script>
+    <script type="text/javascript" src="/vendor/photoswipe/photoswipe.min.js?rXrQZ6Bhyo"></script>
+    <script type="text/javascript" src="/vendor/photoswipe/photoswipe-ui-default.min.js?rXrQZ6Bhyo"></script>
+    <script type="text/javascript" src="/vendor/jquery.cookie.js?rXrQZ6Bhyo"></script>
+    <script type="text/javascript" src="/js/common/photoswipe.init.js?rXrQZ6Bhyo"></script>
+    <script type="text/javascript" src="/js/user/control-download-thumbnail.js?rXrQZ6Bhyo"></script>
+
+        <script>
+            function searchFaces()
+            {
+                const deffer = new $.Deferred();
+                $.ajax({
+                    type: 'GET',
+                    url: '/albums/298447/search_children',
+                    dataType: 'json',
+                    success: function () {
+                        deffer.resolve();
+                    },
+                    error: function() {
+                        deffer.reject();
+                    },
+                });
+                return deffer.promise();
+            }
+
+            function showAlert($open)
+            {
+                const $alertBox = $('#search-notification'); // 顔検索ボタンクリック時に表示されるアラートdiv
+                $open.show();
+                // 5秒後に、メッセージを非表示にする
+                setTimeout(function(){
+                    $alertBox.animate({'right' : '-'+$(window).width()+'px' }, 'slow');
+                }, 5000);
+            }
+
+            // アラートメッセージを閉じる
+            function closeAlertMessage()
+            {
+                $clicked = $(this);
+                $closeBox = $clicked.parents('.white-alert').hide();
+            }
+
+            $(document).ready(function() {
+                $('.close-box button').click(closeAlertMessage); // トーストの閉じるボタン
+            });
+        </script>
+
+    <script>
+        function toggleCart(e) {
+            var quantity = parseInt($(this).attr('quantity'));
+            var cartCnt = parseInt($('span.cart-count').html());
+            if ($(this).is(':checked')) {
+                $('span.cart-count').html(cartCnt + quantity);
+                addToCart(this);
+            } else {
+                $('span.cart-count').html(cartCnt - quantity);
+                $(this).attr('quantity', 1);
+                removeFromCart(this);
+            }
+        }
+
+        function addToCart(checkbox) {
+            var $checkbox = $(checkbox);
+
+            $.ajax({
+                type: 'POST',
+                url: '/carts',
+                data: {
+                    'photo_id': $checkbox.attr('photo_id'),
+                    'size_id': $checkbox.attr('size_id'),
+                    'quantity': 1,
+                    'print': 0
+                },
+            }).done(function(res) {
+                // 一度枚数を更新しているが、連打などをすると値がずれる可能性があるので再度更新する
+                $('span.cart-count').html(res.sum_photo_quantity);
+            }).fail(function(xhr){
+                // status400の場合のみモーダル表示
+                if(xhr.status===400){
+                    $('#errorModal').modal('show');
+                    //モーダル右上閉じるボタンをクリック
+                    $('#errorModalClose').click( function () {
+                        $('#errorModal').modal('hide');
+                        //削除されている場合は表示し続けても意味がないため、アルバム一覧に遷移させる
+                        location.href='/albums';
+                    });
+                }
+            });
+        }
+
+        function removeFromCart(checkbox) {
+            var $checkbox = $(checkbox);
+
+            $.ajax({
+                type: 'DELETE',
+                url: '/carts',
+                data: {
+                    'photo_id': $checkbox.attr('photo_id'),
+                    'size_id': $checkbox.attr('size_id'),
+                    'quantity': 1
+                },
+            }).done(function(res){
+                $('span.cart-count').html(res.sum_photo_quantity);
+            });
+        }
+
+        $("img.lazy").lazyload({
+            threshold: 500,
+            appear: function (elements_left, settings) {
+                var imageObj = $(this);
+                $.get(imageObj.attr('data-src'), function (url) {
+                    imageObj.attr('src', url);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('GET', url, true);
+                    xhr.responseType = 'blob';
+                    xhr.onload = function(e) {
+                        if (this.status === 200) { // レスポンスが正常の場合returnする
+                            return;
+                        }
+
+                        if (this.status === 404) { // レスポンスが404の場合、div全体を非表示に変える
+                            var id = imageObj.data('id');
+                            $('#js-photo_'+id).remove();
+                        }
+
+                        sendBugsnagThumbnailErrorAtRandom(this.status);
+                    };
+                    xhr.send();
+                });
+            }
+        });
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $('[type=checkbox]').change(toggleCart);
+
+        // エラー100回に一回の確率でBugsnagへ通知を送る(100回は適当に決めている)
+        function sendBugsnagThumbnailErrorAtRandom(status)
+        {
+            var random = Math.floor( Math.random () * 100); // 0~99
+            if (random === 0) {
+                bugsnagClient.notify(new Error('cloud front response error. status : ' + status));
+            }
+        }
+    </script>
+    <script>
+        // 右クリックをバインド
+        $('.img-thumbnail, .pswp__item').bind('contextmenu', onShowContextMenu);
+        // 長押し判定をバインド
+        $('.img-thumbnail, .pswp__item').bind('touchstart', onTouchStart);
+
+        //フロートボタンの位置を調整
+        var floatHeight = $('.float-btn-box').outerHeight();
+        var footerMB = parseInt($('footer.small').css('margin-bottom').replace('px', ''));
+        $('footer.small').css('margin-bottom', footerMB + floatHeight + 'px');
+
+        // カラム切り替え
+        function setDispCookie(col) {
+            $.cookie('displayAlbumPhotoColumn', col, {
+                expires: 365,
+                path:'/'
+            });
+        }
+
+        function changeColumn(toCol) {
+            removeClass = 'col-xs-'+(toCol*6);
+            addClass = 'col-xs-'+(12/toCol);
+            nowCol = 2/toCol;
+            $(".p-album-photo .photo").removeClass(removeClass).addClass(addClass);
+            $('#change-column-button').attr('data-column', nowCol);
+            $('#change-column-button span').text(nowCol+'列表示へ切替');
+            setDispCookie(toCol)
+        }
+
+        // クッキーが入っている場合、カラムを合わせる
+        if (($.cookie('displayAlbumPhotoColumn') != null)) {
+            changeColumn($.cookie('displayAlbumPhotoColumn'))
+        }
+
+        // カラムチェンジ
+        $('#change-column-button').click(function(){
+            changeColumn($(this).attr('data-column'));
+        });
+    </script>
+
+
+    
+    
+        <script>
+        // 子供の顔写真登録情報取得
+        function getChildPhotoFaces() {
+            const deffer = new $.Deferred();
+            $.ajax({
+                type: 'GET',
+                url: '/albums/recognition/search_bar/child_photos',
+                dataType: 'json',
+                success: function (photos) {
+                    if (photos.length === 0) {
+                        // メッセージ表示
+                        $(
+                            '.p-rekognition-selected-conditions-registered-list, ' +
+                            '.c-rekognition-sp-search-conditions-candidates-contents__registered, ' +
+                            '.c-rekognition-sp-selected-conditions-registered-list'
+                        ).find('.no-data-message').removeClass('hidden');
+                    }
+
+                    // 検索バー表示制御
+                    const $targetPC = $('.p-rekognition-selected-conditions-registered-list');
+                    const $templatePC = $targetPC.children('.js-template');
+                    const $targetSP = $('.c-rekognition-sp-selected-conditions-registered-list');
+                    const $templateSP = $targetSP.find('.js-template');
+                    const $targetSpSearchConditions = $('.c-rekognition-sp-search-conditions-candidates-contents__registered .list');
+                    const $templateSpSearchConditions = $targetSpSearchConditions.find('.js-template');
+                    const selectedChildIds = [].map(function (id) { return Number(id); });
+                    // PC版の顔写真の幅
+                    const widthOfPcDisplayImage = parseInt(
+                        $templatePC.find('.image').parent().width()
+                    );
+                    // SP版スライドメニューの顔写真の幅
+                    const widthOfSpSearchConditionsDisplayImage = parseInt(
+                        $templateSpSearchConditions.find('.image').parent().width()
+                    );
+                    // 顔の表示
+                    photos.forEach(function (photo, index, arr) {
+                        const id = photo.child_id;
+                        const name = photo.child_name;
+                        const sex = photo.child_sex;
+
+                        // PC版と「SP版のスライドメニュー」のDOMを操作
+                        [
+                            // PC版
+                            [
+                                $targetPC, // 新しいNodeを挿入するNode
+                                $templatePC.clone(), // 挿入するNode。テンプレートをCloneして生成
+                                widthOfPcDisplayImage  // アイコン画像の幅
+                            ],
+                            // SP版のスライドメニュー
+                            [
+                                $targetSpSearchConditions,
+                                $templateSpSearchConditions.clone(),
+                                widthOfSpSearchConditionsDisplayImage
+                            ]
+                        ].forEach(function(arr) {
+                            const $target = arr[0];
+                            const $item = arr[1];
+                            const widthOfDisplayImage = arr[2];
+                            const childPhotosPage = '/account/child/' + id + '/photos';
+
+                            if (photo.child_photo) {
+                                // 子供写真在り
+
+                                // 顔写真のtranslate
+                                const left = photo.child_photo.face.left;
+                                const top = photo.child_photo.face.top;
+                                const width = photo.child_photo.face.width;
+                                const translate =
+                                    'translateX(' + (widthOfDisplayImage / width * left * -1) + 'px) ' +
+                                    'translateY(' + (widthOfDisplayImage / width * top * -1) + 'px) ' +
+                                    'scale(' + (widthOfDisplayImage / width) + ')';
+                                $item.find('.image').css('transform', translate);
+                                $item.find('.image').attr('src', photo.child_photo.url);
+                                // 顔のアイコン
+                                $item.find('.link').remove();
+                                // チェックボックスにIDをセット
+                                $item.find('input').attr('value', id);
+                                // チェックボックスの制御
+                                                                    $item.find('input').prop('checked', true);
+                                    // sp版はスライドメニューを表示するタイミングで制御するのでdata属性にセットしておく
+                                    $item.find('input').data('checked', true);
+                                                                // 顔が複数存在するか？
+                                if (photo.child_photo.hasOther) {
+                                    // ！マークのクリック時の遷移先をセット
+                                    $item.find('.js-confirm-badge').attr('href', childPhotosPage);
+                                } else {
+                                    // ！マークを削除
+                                    $item.find('.js-confirm-badge').remove();
+                                }
+                            } else {
+                                // 子供写真無し
+                                // 顔写真の領域を削除
+                                $item.find('.c-rekognition-label').remove();
+                                // 顔アイコンのクリック時の遷移先をセット
+                                $item.find('.link').attr('href', childPhotosPage);
+                                // 顔アイコンの出し分け
+                                if (sex === 1) {
+                                    // 男
+                                    $item.find('.simple-line-icons-user-female').remove();
+                                } else {
+                                    // 女
+                                    $item.find('.simple-line-icons-user').remove();
+                                }
+                            }
+                            $item.find('.name').html(name); // 名前
+
+                            $item.appendTo($target);
+                            $item.removeClass('js-template');
+                        });
+                        // SP版のDOM操作（スライドメニューのことではない）
+                        if (!photo.child_photo) return;
+                                                    const $newItemSP = $templateSP.clone();
+                            $newItemSP.html(name + ' さん');
+                            // 名前を表示するエリアに追加
+                            $targetSP.find('.list').append($newItemSP);
+                            $newItemSP.removeClass('js-template');
+                                            });
+                    // SP版のメイン画面の名称にカンマを付与
+                    // テンプレ（１）、１個目の要素（２）←ここから処理の対象
+                    const $items = $targetSP.find('.list .item:nth-of-type(n+2)');
+                    $items.each(function(i, item) {
+                        if ((i + 1) < $items.length) {
+                            $(item).html($(item).html() + '、')
+                        }
+                    });
+                    // ！マークの補足を表示
+                    const hasOther = photos
+                        .filter(function (photo) { return !!photo.child_photo })
+                        .some(function (photo) { return photo.child_photo.hasOther });
+                    // PC版
+                    const $confirmBadgePC = $('.c-rekognition-child-face-confirm');
+                    // SP版
+                    const $confirmBadgeSP = $('.c-rekognition-sp-selected-conditions-link');
+                    // SP版スライドメニュー
+                    const $confirmBadgeSpSearchConditions = $('.c-rekognition-sp-search-conditions-candidates-contents__child-face-confirm');
+                    if (hasOther) {
+                        $confirmBadgePC.css('display', '');
+                        $confirmBadgeSP.find('.image').css('display', ''); // ！マーク画像を削除
+                        $confirmBadgeSpSearchConditions.css('display', '');
+                    } else {
+                        $confirmBadgePC.remove();
+                        $confirmBadgeSP.find('.text').css('display', ''); // テキストリンクを削除
+                        $confirmBadgeSpSearchConditions.remove();
+                    }
+                    // テンプレート削除
+                    $templatePC.remove();
+                    $templateSP.remove();
+                    $templateSpSearchConditions.remove();
+
+                    deffer.resolve(photos);
+                },
+                error: function() {
+                    deffer.reject();
+                },
+            });
+            return deffer.promise();
+        }
+        // 購入済み写真情報取得
+        function getPurchasedPhotoFaces() {
+            const deffer = new $.Deferred();
+            $.ajax({
+                type: 'GET',
+                url: '/albums/recognition/search_bar/purchased_photos',
+                dataType: 'json',
+                data: {
+                    show_face_ids: []                },
+                success: function (photos) {
+                    if (photos.length === 0) {
+                        // メッセージ表示
+                        $(
+                            '.p-rekognition-selected-conditions-purchased-list, ' +
+                            '.c-rekognition-sp-search-conditions-candidates-contents__purchased, ' +
+                            '.c-rekognition-sp-selected-conditions-purchased-list'
+                        ).find('.no-data-message').removeClass('hidden');
+                    }
+                    // 検索バー表示制御
+                    const $targetPC = $('.p-rekognition-selected-conditions-purchased-list');
+                    const $templatePC = $targetPC.children('.js-template');
+                    const $targetSP = $('.c-rekognition-sp-selected-conditions-purchased-list .list');
+                    const $templateSP = $targetSP.find('.js-template');
+                    const $targetSpSearchConditions = $('.c-rekognition-sp-search-conditions-candidates-contents__purchased .list');
+                    const $templateSpSearchConditions = $targetSpSearchConditions.find('.js-template');
+                    const selectedFaceIds = [].map(function (id) { return Number(id); });
+                    // PC版の顔写真の幅
+                    const widthOfPcDisplayImage = parseInt(
+                        $templatePC.find('.image').parent().width()
+                    );
+                    // SP版の顔写真の幅
+                    const widthOfSpDisplayImage = parseInt(
+                        $templateSP.find('.image').parent().width()
+                    );
+                    // SP版スライドメニューの顔写真の幅
+                    const widthOfSpSearchConditionsDisplayImage = parseInt(
+                        $templateSpSearchConditions.find('.image').parent().width()
+                    );
+                    // 顔の表示
+                    photos.forEach(function (photo, index, arr) {
+                        const id = photo.photo_face_id;
+
+                        const targets = [
+                            // PC版
+                            [
+                                $targetPC, // 新しいNodeを挿入するNode
+                                $templatePC.clone(), // 挿入するNode。テンプレートをCloneして生成
+                                widthOfPcDisplayImage  // アイコン画像の幅
+                            ],
+                            // SP版のスライドメニュー
+                            [
+                                $targetSpSearchConditions,
+                                $templateSpSearchConditions.clone(),
+                                widthOfSpSearchConditionsDisplayImage
+                            ]
+                        ]
+
+                        // SP版は選択されているもののみ表示
+                        if (selectedFaceIds.indexOf(id) >= 0) {
+                            targets.push(
+                                [
+                                    $targetSP,
+                                    $templateSP.clone(),
+                                    widthOfSpDisplayImage
+                                ]
+                            );
+                        }
+                        targets.forEach(function(arr) {
+                            const $target = arr[0];
+                            const $item = arr[1];
+                            const widthOfDisplayImage = arr[2];
+
+                            // 顔写真のtranslate
+                            const left = photo.photo_face.bounding_box.left;
+                            const top = photo.photo_face.bounding_box.top;
+                            const width = photo.photo_face.bounding_box.width;
+                            const translate =
+                                'translateX(' + (widthOfDisplayImage / width * left * -1) + 'px) ' +
+                                'translateY(' + (widthOfDisplayImage / width * top * -1) + 'px) ' +
+                                'scale(' + (widthOfDisplayImage / width) + ')';
+                            $item.find('.image').css('transform', translate);
+                            $item.find('.image').attr('src', photo.photo_face.url);
+                            // チェックボックスにIDをセット
+                            $item.find('.js-checkbox-selected_face_ids').attr('value', id);
+                            $item.find('.js-hidden-show_face_ids').attr('value', id);
+                            // チェックボックスの制御
+                            if (selectedFaceIds.indexOf(id) >= 0) {
+                                // 処理対象の子供写真のチェックボックスをON
+                                $item.find('.js-checkbox-selected_face_ids').prop('checked', true);
+                                // sp版はスライドメニューを表示するタイミングで制御するのでdata属性にセットしておく
+                                $item.find('.js-checkbox-selected_face_ids').data('checked', true);
+                            }
+
+                            $item.appendTo($target);
+                            $item.removeClass('js-template');
+                        });
+                    });
+                    $templatePC.remove();
+                    $templateSP.remove();
+                    $templateSpSearchConditions.remove();
+
+                    deffer.resolve(photos);
+                },
+                error: function() {
+                    deffer.reject();
+                },
+            });
+            return deffer.promise();
+        }
+
+        // 顔検索と登録済み子供写真の取得
+        $.when(
+                            searchFaces(), 
+                        getChildPhotoFaces(),
+            getPurchasedPhotoFaces()
+        )
+            .done(function (_, childPhotoFaces, purchasedPhotoFaces) {
+                // 条件変更リンクを表示
+                if (childPhotoFaces.length > 0 || purchasedPhotoFaces.length > 0) {
+                    $('.c-rekognition-sp-selected-conditions-link .link').css("display", "block");
+                }
+                // 探すボタンの初期状態
+                $('.js-button-search').prop(
+                    'disabled',
+                    !$('.js-checkbox-child_ids:checked, .js-checkbox-selected_face_ids:checked').length
+                );
+                // チェックボックス押下時の処理。顔写真取得時にDOM生成もしているので、ここでセットする
+                $('.js-checkbox-child_ids, .js-checkbox-selected_face_ids')
+                    .change(function() {
+                        $('.js-button-search').prop(
+                            'disabled',
+                            !$('.js-checkbox-child_ids:checked, .js-checkbox-selected_face_ids:checked').length
+                        );
+                    });
+            })
+            .fail(function () {
+                showAlert($('.white-alert.failed')); 
+            });
+
+        // SP版 条件変更リンク
+        $('.js-open-search-conditions').click(function() {
+            // スライドメニューを表示
+            const body = document.body;
+            body.style.top = (window.scrollY * -1) + 'px';
+            body.style.position = 'fixed';
+            const $searchConditions = $('.p-rekognition-sp-search-conditions');
+            $searchConditions.addClass('p-rekognition-sp-search-conditions-open');
+            const $searchFooterConditions = $('.p-rekognition-sp-search-conditions-footer');
+            $searchFooterConditions.addClass('p-rekognition-sp-search-conditions-footer-open');
+            // チェックボックスを初期表示の状態に戻す
+            $('.js-checkbox-child_ids, .js-checkbox-selected_face_ids')
+                .each(function(i, checkbox) {
+                    $(checkbox).prop('checked', $(checkbox).data('checked'))
+                    // 結果を表示するボタンの制御
+                    if ($(checkbox).data('checked')) {
+                        $('.js-button-search').prop('disabled',false);
+                    }
+                });
+            return false;
+        });
+        // SP版 結果を表示するボタン
+        $('.js-close-search-conditions').click(function() {
+            // スライドメニューを非表示
+            const body = document.body;
+            body.style.position = '';
+            window.scrollTo(0, parseInt(body.style.top || '0') * -1);
+            const $searchConditions = $('.p-rekognition-sp-search-conditions');
+            $searchConditions.removeClass('p-rekognition-sp-search-conditions-open');
+            const $searchFooterConditions = $('.p-rekognition-sp-search-conditions-footer');
+            $searchFooterConditions.removeClass('p-rekognition-sp-search-conditions-footer-open');
+            return false;
+        });
+    </script>
+        
+        
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-f0800346c0914528590","applicationID":"1383528521","transactionName":"Z1VbMkNUV0pXVRZZXl4feAVFXFZXGXcSQG14RE0WbXZWV0JEDVxdVUJKOmRGXEtqdw5SRF1zVghFR1ZVWlMQcEJYX04=","queueTime":0,"applicationTime":235,"atts":"SxJYRAtOREQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+

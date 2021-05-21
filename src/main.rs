@@ -18,5 +18,16 @@ fn main() {
     let token = html::get_token(&html).unwrap();
     println!("token: {}", token);
     client.post_login(&username, &password, &token);
+    let album_html = client.get_album(url);
+    // println!("{}", album_html);
+    let data_srcs = html::get_data_src(&album_html);
+    for d in &data_srcs {
+        println!("{}", d);
+    }
+    let thumnail_urls = client.get_data_src(&data_srcs);
+    for t in &thumnail_urls {
+        println!("{}", t);
+    }
+    client.get_thumbnail(&thumnail_urls);
 }
 
