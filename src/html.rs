@@ -18,7 +18,7 @@ pub fn get_token(html: &str) -> Result<String, &str> {
 
 #[test]
 fn test_get_token(){
-    let html = fs::read_to_string("src/login.html").unwrap();
+    let html = std::fs::read_to_string("src/login.html").unwrap();
     assert_eq!("WDSoa4MkKZG6G7JM2svtVnyyvSK2CojeewtY0gFt", get_token(&html).unwrap());
 }
 
