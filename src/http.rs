@@ -35,7 +35,7 @@ impl Client {
         self.http_get(album_url)
     }
 
-    pub fn get_data_src(&self, data_srcs:&Vec<String>) -> Vec<String> {
+    pub fn get_data_src(&self, data_srcs:&[String]) -> Vec<String> {
         let mut urls : Vec<String> = Vec::new();
         for d in data_srcs {
             let url = ENPHOTO_URL.to_string() + &d;
@@ -45,7 +45,7 @@ impl Client {
         urls
     }
 
-    pub fn get_thumbnail(&self, thumnail_urls:&Vec<String>){
+    pub fn get_thumbnail(&self, thumnail_urls:&[String]){
         for t in thumnail_urls {
             let parsed = Url::parse(t).unwrap();
             let url_path = parsed.path();

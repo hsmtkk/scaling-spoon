@@ -19,7 +19,6 @@ fn main() {
     println!("token: {}", token);
     client.post_login(&username, &password, &token);
     let album_html = client.get_album(url);
-    // println!("{}", album_html);
     let data_srcs = html::get_data_src(&album_html);
     for d in &data_srcs {
         println!("{}", d);
