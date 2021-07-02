@@ -13,13 +13,16 @@ pub fn get_token(html: &str) -> Result<String, &str> {
             }
         }
     }
-    return Err("failed to find token");
+    Err("failed to find token")
 }
 
-#[test]
-fn test_get_token(){
-    let html = std::fs::read_to_string("src/login.html").unwrap();
-    assert_eq!("WDSoa4MkKZG6G7JM2svtVnyyvSK2CojeewtY0gFt", get_token(&html).unwrap());
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn test_get_token(){
+        let html = std::fs::read_to_string("src/login.html").unwrap();
+        assert_eq!("WDSoa4MkKZG6G7JM2svtVnyyvSK2CojeewtY0gFt", get_token(&html).unwrap());
+    }    
 }
 
 pub fn get_data_src(html:&str) -> Vec<String> {
@@ -31,5 +34,5 @@ pub fn get_data_src(html:&str) -> Vec<String> {
             data_srcs.push(data_src.to_string());
         }
     }
-    return data_srcs;
+    data_srcs
 }

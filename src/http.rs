@@ -2,8 +2,6 @@ use std::collections::HashMap;
 use std::fs;
 use url::Url;
 
-use reqwest;
-
 const ENPHOTO_URL: &str = "https://en-photo.net";
 const LOGIN_URL: &str = "https://en-photo.net/login";
 
@@ -14,11 +12,11 @@ pub struct Client {
 impl Client {
     pub fn new() -> Client {
         let client = reqwest::blocking::Client::builder().cookie_store(true).build().unwrap();
-        return Client {client:client};
+        Client {client}
     }
 
     pub fn get_login(&self) -> String {
-        return self.http_get(LOGIN_URL);
+        self.http_get(LOGIN_URL)
     }
 
     pub fn post_login(&self, username:&str, password:&str, token:&str) {
@@ -34,7 +32,7 @@ impl Client {
     }
 
     pub fn get_album(&self, album_url:&str) -> String {
-        return self.http_get(album_url);
+        self.http_get(album_url)
     }
 
     pub fn get_data_src(&self, data_srcs:&Vec<String>) -> Vec<String> {
@@ -44,7 +42,7 @@ impl Client {
             let content = self.http_get(&url);
             urls.push(content);
         }
-        return urls;
+        urls
     }
 
     pub fn get_thumbnail(&self, thumnail_urls:&Vec<String>){
@@ -70,6 +68,6 @@ impl Client {
         if !stat.is_success(){
             println!("HTTP GET failed {}", stat);
         }
-        return resp.text().unwrap();
+        resp.text().unwrap()
     }
 }
